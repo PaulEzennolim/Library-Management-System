@@ -1,4 +1,5 @@
 Library Management System
+
 About This Project
 This project is a Library Management System developed using Java (NetBeans IDE) for the front end and MySQL for the back 
 end. The system manages library operations such as book inventory, staff management, and administrative tasks. It is 
