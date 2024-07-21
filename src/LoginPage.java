@@ -3,6 +3,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.Statement;
+import javax.swing.JOptionPane;
+import java.sql.ResultSet;
+
 /**
  *
  * @author Paule
@@ -58,6 +64,11 @@ public class LoginPage extends javax.swing.JFrame {
 
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jButton1.setText("LOGIN");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -111,6 +122,78 @@ public class LoginPage extends javax.swing.JFrame {
     private void passwordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_passwordActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        /* url contains the address where your mysql is stored. Localhost has been used because its on personal desktop 
+        only. Port number: 3306. Library is the name of the database created.
+        */
+        String url = "jdbc:mysql://localhost:3306/library?useSSL=false";
+        String mysqluser = "root"; // Root account is being used
+        String mysqlpwd = "Ezennolim123!"; // Password to log into mysql account
+        /* This is the password we are getting from the user. The variable name for the JPasswordField is password, so 
+        that input is being used (password.getPassword()) and is converted into a string, using new String, because it 
+        is of the form password.
+        */
+        String pswrd=new String(password.getPassword()); //
+        String username = user.getText(); // Stores the username input
+        /* This statement will be put into the mysql and this will be done by netbeans through the connection 
+        we have made. To check whether the user is authorised to login into the account, this query will be 
+        passed in the mysql and by this we'll check whether the password that is in the database is the same 
+        as the password the user is trying to log in with. Only if the password and the username match what 
+        is in the database, will the user be able to log in. Otherise an error message will come up that either the 
+        username or the password is wrong.
+        */
+        String query = ("select PASSWORD from admin where USER_ID = '" + username + "';");
+        
+        try{ // Try - catch block is used in order to avoid run time issues
+            /* DriveManager.getConnection function helps you to connect to your mysql database, according to 
+            the inputs url, mysqluser and msqlpwd.
+            */
+            Connection conn = DriverManager.getConnection(url, mysqluser, mysqlpwd);
+            Statement stm = conn.createStatement(); // Creates statement
+            /* stm.executeQuery is a function used to execute the query in mysql
+            */
+            ResultSet rs = stm.executeQuery(query);
+            
+            /* rs.next goes to the next row. If there is a next row then it'll work otherwise it won't work. 
+            For example, the USER_ID we are getting, incase the username is not present in the table, then we
+            won't get an output. In that case rs.next won't go to any other row because there won't be any 
+            other matching username. So the block of code underneath rs.next will not be executed. We will 
+            move straight to the else part.
+            */
+            if (rs.next()) {
+                /* We have the result stored in rs, so we need to get that string. "PASSWORD" is the column 
+                name in the admin table. So we are taking the string that is present in the PASSWORD field 
+                that stored into the rs and storing that in realpswrd.
+                */
+                String realpswrd = rs.getString("PASSWORD");
+                /* Check if realpswrd is the same as the password inputted by the user. Only if the passwords 
+                are equal, we'll move to the dashboard.
+                */
+                if(realpswrd.equals(pswrd)) {
+                    Dashboard dsh = new Dashboard(); // Creates an object of dashboard 
+                    dsh.setVisible(true);
+                    // this.dispose(); // Disposes the current login page, once the user has logged in
+                }
+                /* Suppose the password entered by the user is wrong (does not match the password in the 
+                database), using JOptionPane.showMessageDialog function, an error message pops up 
+                "usernmae or password entered is wrong". this specifies the class in which it is present, so
+                this class.
+                */
+                else {
+                    JOptionPane.showMessageDialog(this, "username or password entered is wrong");
+                }
+            }
+            /* Suppose the user name was not present in the table, then we move to this else block. A message will appear 
+            "Wrong username"
+            */
+            else 
+                JOptionPane.showMessageDialog(this, "Wrong username");
+        }
+        catch (Exception e) {
+            JOptionPane.showMessageDialog(this, e.getMessage()); // automatically prints a suitable message for the user
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
