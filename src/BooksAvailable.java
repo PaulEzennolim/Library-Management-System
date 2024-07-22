@@ -145,7 +145,7 @@ public class BooksAvailable extends javax.swing.JFrame {
                 * - `author`: Value from the "AUTHOR" column.
                 * - `copies`: Value from the "COPIES" column (retrieved as an integer).
                 */
-                String bookid = rs.getString("BOOK_ID"); // column names
+                String bookid = rs.getString("BOOK_ID");
                 String category = rs.getString("CATEGORY");
                 String name = rs.getString("NAME");
                 String author = rs.getString("AUTHOR");
@@ -166,7 +166,7 @@ public class BooksAvailable extends javax.swing.JFrame {
             */
             rs.close();
             stm.close();
-            } catch(Exception e) { // Catch block to handle any errors
+            } catch(Exception e) {
                 // Display an error message if an exception occurs during database operations
                 JOptionPane.showMessageDialog(this, e.getMessage()); 
             }
@@ -174,7 +174,12 @@ public class BooksAvailable extends javax.swing.JFrame {
 
     private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
 
-        // This will dispose the books available window and the user will move back to the dashboard window
+        /**
+        * Closes the current window and returns the user to the previous window (the dashboard).
+        * 
+        * The `dispose` method releases the resources associated with this window and makes it invisible.
+        * The user will be redirected back to the dashboard window, which remains open.
+        */
         this.dispose();
     }//GEN-LAST:event_backActionPerformed
 
