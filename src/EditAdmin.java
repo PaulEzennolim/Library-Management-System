@@ -108,7 +108,7 @@ public class EditAdmin extends javax.swing.JFrame {
     private void updateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateActionPerformed
         String url = "jdbc:mysql://localhost/library"; // Database URL
         String user = "root"; // Database User ID
-        String pwd = "Ezennolim123!"; // Database Password
+        String pwd = ""; // Database Password
         /* Retrieve the selected column value from the combobox. 'columnlist' is the name of the combobox, and 
         'getSelectedItem()' fetches the selected item in the combobox.
         */
