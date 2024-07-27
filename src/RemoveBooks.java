@@ -12,7 +12,6 @@ import java.sql.*;
 import javax.swing.*;
 
 public class RemoveBooks extends javax.swing.JFrame {
-
     /**
      * Creates new form RemoveBooks
      */
