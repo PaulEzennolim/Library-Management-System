@@ -108,7 +108,7 @@ public class BooksAvailable extends javax.swing.JFrame {
         */
         String url="jdbc:mysql://localhost/library";
         String user="root"; // Database username
-        String pwd="Ezennolim123!"; // Database password
+        String pwd=""; // Database password
         /**
         * SQL query to retrieve all records from the `books` table.
         * 
