@@ -150,7 +150,7 @@ public class AddBooks extends javax.swing.JFrame {
     private void addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addActionPerformed
         String url = "jdbc:mysql://localhost/library"; // URL for the MySQL database connection
         String user = "root"; // Username for the database connection
-        String pwd = "Ezennolim123!"; // Password for the database connection
+        String pwd = ""; // Password for the database connection
         /* SQL query to insert a new book record into the books table. 
         Normally, we would hard code the values to be inserted within the parentheses. 
         However, in this case, the values will be provided by the user, so we use placeholders (?) to allow for parameterized input.
