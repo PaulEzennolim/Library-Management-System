@@ -12,7 +12,6 @@ import java.sql.*;
 import javax.swing.*;
 
 public class AddStaff extends javax.swing.JFrame {
-
     /**
      * Creates new form AddStaff
      */
