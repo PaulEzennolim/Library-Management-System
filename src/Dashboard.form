@@ -144,6 +144,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="ADD STAFF"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addStaffActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="b6">
       <Properties>

@@ -73,6 +73,11 @@ public class Dashboard extends javax.swing.JFrame {
 
         b5.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         b5.setText("ADD STAFF");
+        b5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addStaffActionPerformed(evt);
+            }
+        });
 
         b6.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         b6.setText("REMOVE STAFF");
@@ -167,6 +172,12 @@ public class Dashboard extends javax.swing.JFrame {
     private void b3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_b3ActionPerformed
+
+    private void addStaffActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addStaffActionPerformed
+        // After clicking the "Add Staff" button, navigate to the Add Staff window.
+        AddStaff staff = new AddStaff(); // Create an instance of the AddStaff window
+        staff.setVisible(true); // Make the AddStaff window visible
+    }//GEN-LAST:event_addStaffActionPerformed
 
     /**
      * @param args the command line arguments
