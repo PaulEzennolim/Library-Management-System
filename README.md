@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 # Library Management System
- 
-=======
+
 Library Management System
 
 About This Project:
@@ -34,4 +32,3 @@ Staff Table: Stores details of library staff members.
 The front end and back end are integrated using JDBC (Java Database Connectivity
 
 Thank you for taking the time to check out this project! Your interest and support mean the world to me.
->>>>>>> dd1ebf3d2f34e2a0208e91bc8f76289a3d9b078b
