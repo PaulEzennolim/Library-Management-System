@@ -104,7 +104,7 @@ public class StaffDetails extends javax.swing.JFrame {
         // Database connection details
         String url="jdbc:mysql://localhost/library";
         String user="root";
-        String pwd="Ezennolim123!";
+        String pwd="";
         String query="select * from staffs;"; // SQL query to display all details from the staffs table
         
         try {
