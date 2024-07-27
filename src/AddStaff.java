@@ -112,7 +112,7 @@ public class AddStaff extends javax.swing.JFrame {
     private void addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addActionPerformed
         String url = "jdbc:mysql://localhost/library"; // Database URL
         String user = "root"; // Database User ID
-        String pwd = "Ezennolim123!"; // Database Password
+        String pwd = ""; // Database Password
         /*
         SQL query to insert values into the 'staffs' table. The '?' placeholders will be replaced with actual values 
         provided by the user at runtime. The number of '?' should match the number of columns in the table.
