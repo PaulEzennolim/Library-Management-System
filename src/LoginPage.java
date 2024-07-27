@@ -13,8 +13,8 @@ import java.sql.DriverManager;
 import java.sql.Statement;
 import javax.swing.JOptionPane;
 import java.sql.ResultSet;
-public class LoginPage extends javax.swing.JFrame {
 
+public class LoginPage extends javax.swing.JFrame {
     /**
      * Creates new form LoginPage
      */
