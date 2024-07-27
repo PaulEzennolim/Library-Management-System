@@ -59,7 +59,7 @@ public class Dashboard extends javax.swing.JFrame {
         b3.setText("REMOVE BOOKS");
         b3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                b3ActionPerformed(evt);
+                removeBooksActionPerformed(evt);
             }
         });
 
@@ -169,9 +169,10 @@ public class Dashboard extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_b6ActionPerformed
 
-    private void b3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_b3ActionPerformed
+    private void removeBooksActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeBooksActionPerformed
+        RemoveBooks remove = new RemoveBooks(); // Create an object 'remove' of type RemoveBooks
+        remove.setVisible(true);
+    }//GEN-LAST:event_removeBooksActionPerformed
 
     private void addStaffActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addStaffActionPerformed
         // After clicking the "Add Staff" button, navigate to the Add Staff window.
