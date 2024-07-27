@@ -97,7 +97,7 @@ public class RemoveBooks extends javax.swing.JFrame {
     private void deleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteActionPerformed
         String url = "jdbc:mysql://localhost/library"; // Database URL
         String user = "root"; // Database User ID
-        String pwd = "Ezennolim123!"; // Database Password
+        String pwd = ""; // Database Password
         // Get the input value from the text field 't1'. The data type of NAME and BOOK_ID is varchar.
         String input = t1.getText();
         // Define the SQL query to delete a book based on its ID or name
