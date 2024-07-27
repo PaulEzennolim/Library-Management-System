@@ -12,7 +12,6 @@ import java.sql.*;
 import javax.swing.*;
 
 public class RemoveStaff extends javax.swing.JFrame {
-
     /**
      * Creates new form RemoveStaff
      */
@@ -43,6 +42,7 @@ public class RemoveStaff extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel1.setText("ENTER A STAFF ID OR STAFF NAME TO DELETE");
 
+        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jButton1.setText("DELETE");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -50,6 +50,7 @@ public class RemoveStaff extends javax.swing.JFrame {
             }
         });
 
+        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jButton2.setText("CANCEL");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
