@@ -138,7 +138,7 @@ public class LoginPage extends javax.swing.JFrame {
         // The username for connecting to the MySQL database. "root" is the default administrative user
         String mysqluser = "root";
         // The password for the MySQL user account used to establish the database connection
-        String mysqlpwd = "Ezennolim123!";
+        String mysqlpwd = "";
         /*
         * Retrieve the password input provided by the user from the JPasswordField component.
         * The getPassword() method returns the password as a character array for security reasons.
