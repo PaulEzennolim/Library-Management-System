@@ -133,11 +133,10 @@ public class RemoveBooks extends javax.swing.JFrame {
             // Display an error message to the user if an exception occurs
             JOptionPane.showMessageDialog(this, e.getMessage());
         }
-
     }//GEN-LAST:event_deleteActionPerformed
 
     private void cancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelActionPerformed
-        this.dispose(); // Close the current window
+        this.dispose(); // Close the current window 
     }//GEN-LAST:event_cancelActionPerformed
 
     /**
