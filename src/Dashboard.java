@@ -83,7 +83,7 @@ public class Dashboard extends javax.swing.JFrame {
         b6.setText("REMOVE STAFF");
         b6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                b6ActionPerformed(evt);
+                removeStaffActionPerformed(evt);
             }
         });
 
@@ -151,27 +151,28 @@ public class Dashboard extends javax.swing.JFrame {
         * The BooksAvailable window is displayed to the user, and it remains open independently from the
         * dashboard window. When the user closes the BooksAvailable window, they will return to the dashboard.
         */
-        BooksAvailable books = new BooksAvailable();
-        books.setVisible(true);
+        BooksAvailable available = new BooksAvailable();
+        available.setVisible(true);
     }//GEN-LAST:event_booksAvailableActionPerformed
 
     private void addBooksActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addBooksActionPerformed
-        AddBooks addBooks = new AddBooks();
-        addBooks.setVisible(true);
+        AddBooks books = new AddBooks();
+        books.setVisible(true);
     }//GEN-LAST:event_addBooksActionPerformed
 
     private void staffDetailsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_staffDetailsActionPerformed
-        StaffDetails staff = new StaffDetails();
-        staff.setVisible(true);
+        StaffDetails details = new StaffDetails();
+        details.setVisible(true);
     }//GEN-LAST:event_staffDetailsActionPerformed
 
-    private void b6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_b6ActionPerformed
+    private void removeStaffActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeStaffActionPerformed
+        RemoveStaff staff = new RemoveStaff();// Create an object 'staff' of type RemoveStaff
+        staff.setVisible(true);
+    }//GEN-LAST:event_removeStaffActionPerformed
 
     private void removeBooksActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeBooksActionPerformed
-        RemoveBooks remove = new RemoveBooks(); // Create an object 'remove' of type RemoveBooks
-        remove.setVisible(true);
+        RemoveBooks books = new RemoveBooks(); // Create an object 'remove' of type RemoveBooks
+        books.setVisible(true);
     }//GEN-LAST:event_removeBooksActionPerformed
 
     private void addStaffActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addStaffActionPerformed
