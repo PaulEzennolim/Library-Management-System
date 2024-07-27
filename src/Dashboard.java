@@ -7,6 +7,7 @@
  *
  * @author Paule
  */
+
 public class Dashboard extends javax.swing.JFrame {
 
     /**
@@ -89,6 +90,11 @@ public class Dashboard extends javax.swing.JFrame {
 
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jButton1.setText("EDIT ADMIN");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                editAdminActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -166,20 +172,24 @@ public class Dashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_staffDetailsActionPerformed
 
     private void removeStaffActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeStaffActionPerformed
-        RemoveStaff staff = new RemoveStaff();// Create an object 'staff' of type RemoveStaff
+        RemoveStaff staff = new RemoveStaff();
         staff.setVisible(true);
     }//GEN-LAST:event_removeStaffActionPerformed
 
     private void removeBooksActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeBooksActionPerformed
-        RemoveBooks books = new RemoveBooks(); // Create an object 'remove' of type RemoveBooks
+        RemoveBooks books = new RemoveBooks();
         books.setVisible(true);
     }//GEN-LAST:event_removeBooksActionPerformed
 
     private void addStaffActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addStaffActionPerformed
-        // After clicking the "Add Staff" button, navigate to the Add Staff window.
-        AddStaff staff = new AddStaff(); // Create an instance of the AddStaff window
-        staff.setVisible(true); // Make the AddStaff window visible
+        AddStaff staff = new AddStaff();
+        staff.setVisible(true);
     }//GEN-LAST:event_addStaffActionPerformed
+
+    private void editAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editAdminActionPerformed
+        EditAdmin admin = new EditAdmin(); 
+        admin.setVisible(true);
+    }//GEN-LAST:event_editAdminActionPerformed
 
     /**
      * @param args the command line arguments
