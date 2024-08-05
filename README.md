@@ -2,9 +2,9 @@
 
 Welcome to the Library Management System project! This application is designed to streamline library operations, including book inventory management, staff management, and administrative tasks. Developed using Java with the NetBeans IDE and MySQL, it provides a user-friendly interface and efficient backend database management.
 
-Project Overview
+# Project Overview
 
-Front End
+# Front End
 
 The front end of the application is built using Java Swing, featuring several JFrames:
 
@@ -20,7 +20,7 @@ The front end of the application is built using Java Swing, featuring several JF
 
   * Add/Remove Staff: Manage staff member information.
 
-Back End
+# Back End
 
 The back end is powered by MySQL and comprises three main tables:
 
@@ -32,7 +32,7 @@ The back end is powered by MySQL and comprises three main tables:
 
 The application uses JDBC (Java Database Connectivity) to integrate the front end with the back end, enabling seamless data transactions and management.
 
-Technologies Used:
+# Technologies Used:
 
 * Java: Core programming language used for developing the front end and application logic.
 
@@ -44,7 +44,7 @@ Technologies Used:
 
 * JDBC: API for connecting and executing SQL queries in the database.
 
-Features:
+# Features:
 
 * Secure Login: Ensures that only authorized personnel can access the system.
 
