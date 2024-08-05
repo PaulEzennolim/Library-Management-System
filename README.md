@@ -12,13 +12,13 @@ The front end of the application is built using Java Swing, featuring several JF
 
 * Dashboard: Post-login, the admin can access various functionalities:
 
-- View Available Books: Display a list of all books in the library.
+  * View Available Books: Display a list of all books in the library.
 
-- View Staff Details: Display a list of all staff members.
+  *View Staff Details: Display a list of all staff members.
 
-- Add/Remove Books: Manage the library's book inventory.
+  * Add/Remove Books: Manage the library's book inventory.
 
-- Add/Remove Staff: Manage staff member information.
+  * Add/Remove Staff: Manage staff member information.
 
 Back End
 
