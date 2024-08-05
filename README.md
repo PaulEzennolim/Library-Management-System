@@ -14,7 +14,7 @@ The front end of the application is built using Java Swing, featuring several JF
 
   * View Available Books: Display a list of all books in the library.
 
-  *View Staff Details: Display a list of all staff members.
+  * View Staff Details: Display a list of all staff members.
 
   * Add/Remove Books: Manage the library's book inventory.
 
