@@ -54,4 +54,4 @@ The application uses JDBC (Java Database Connectivity) to integrate the front en
 
 * User-Friendly Interface: Easy-to-navigate GUI for smooth user experience.
 
-Thank you for taking the time to check out this project! Your interest and support means so much to me.
+Thank you for taking the time to check out this project!
